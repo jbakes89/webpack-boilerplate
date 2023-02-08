@@ -1,1 +1,1 @@
-Install npm
+Run webpack init and install eslint
