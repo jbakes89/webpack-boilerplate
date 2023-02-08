@@ -1,1 +1,1 @@
-Install jest and update README.md
+Add eslint-jest integration and vscode autocomplete for jest globals
