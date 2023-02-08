@@ -1,15 +1,3 @@
-# 🚀 Welcome to your new awesome project!
+# Webpack Boilerplate
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+This repo contains boilerplate for a new npm/webpack project, which I should be able to use as an entry point for new projects in the future.
