@@ -13,72 +13,72 @@ const isProduction = process.env.NODE_ENV == "production";
 const stylesHandler = "style-loader";
 
 const config = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "dist"),
-  },
-  devServer: {
-    open: true,
-    host: "localhost",
+    entry: "./src/index.js",
+    output: {
+        path: path.resolve(__dirname, "dist"),
+    },
+    devServer: {
+        open: true,
+        host: "localhost",
     // static: "./dist/",
     // watchFiles: ["src/*.html"],
     // hot: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "src/index.html",
-      inject: false,
-    }),
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "src/index.html",
+            inject: false,
+        }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-  ],
-  devtool: "eval-source-map",
-  // output: {
-  //   filename: "bundle.js",
-  //   path: path.resolve(__dirname, "dist"),
-  //   clean: true,
-  // },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/i,
-        exclude: /node_modules/,
-        loader: "babel-loader",
-      },
-      {
-        test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
-      },
-      // {
-      //   test: /\.html$/i,
-      //   loader: "html-loader",
-      //   options: {
-      //     sources: {
-      //       list: [
-      //         "...",
-      //         {
-      //           tag: "script",
-      //           attribute: "src",
-      //           type: "src",
-      //           filter: () => false,
-      //         }
-      //       ]
-      //     }
-      //   }
-      // },
     ],
-  },
+    devtool: "eval-source-map",
+    // output: {
+    //   filename: "bundle.js",
+    //   path: path.resolve(__dirname, "dist"),
+    //   clean: true,
+    // },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+            },
+            {
+                test: /\.css$/i,
+                use: [stylesHandler, "css-loader"],
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                type: "asset",
+            },
+            // {
+            //   test: /\.html$/i,
+            //   loader: "html-loader",
+            //   options: {
+            //     sources: {
+            //       list: [
+            //         "...",
+            //         {
+            //           tag: "script",
+            //           attribute: "src",
+            //           type: "src",
+            //           filter: () => false,
+            //         }
+            //       ]
+            //     }
+            //   }
+            // },
+        ],
+    },
 };
 
 module.exports = () => {
-  if (isProduction) {
-    config.mode = "production";
-  } else {
-    config.mode = "development";
-  }
-  return config;
+    if (isProduction) {
+        config.mode = "production";
+    } else {
+        config.mode = "development";
+    }
+    return config;
 };
