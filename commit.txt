@@ -1,1 +1,1 @@
-Run webpack init and install eslint
+Update webpack, eslint, and prettier config
