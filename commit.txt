@@ -1,1 +1,1 @@
-Update webpack, eslint, and prettier config
+Update ESLint packages
