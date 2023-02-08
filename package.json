@@ -1,0 +1,20 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Basic setup for projects using webpack and npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbakes89/webpack-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbakes89/webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/jbakes89/webpack-boilerplate#readme"
+}
